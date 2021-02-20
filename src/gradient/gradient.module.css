@@ -1,0 +1,8 @@
+.gradient{
+    display: flex;
+}
+.buttonStyle{
+    width: 50px;
+    height: 50px;
+    margin: 15px 5px;
+}
