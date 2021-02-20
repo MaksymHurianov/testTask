@@ -7,8 +7,8 @@ import {EditGradient} from "./EditGradient";
 export function Routing() {
 
     const [colorValues, setColorValues] = useState([{
-        // colorFirstValue:'',
-        // colorSecondValue:''
+        colorFirstValue:'',
+        colorSecondValue:''
     }])
 
     return (
