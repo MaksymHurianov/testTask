@@ -45,5 +45,8 @@ a {
 input{
     font-size: 30px
 }
+.title {
+    text-align: center;
+}
 
 

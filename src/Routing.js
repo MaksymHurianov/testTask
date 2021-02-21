@@ -6,10 +6,8 @@ import {EditGradient} from "./EditGradient";
 
 export function Routing() {
 
-    const [colorValues, setColorValues] = useState([{
-        colorFirstValue:'',
-        colorSecondValue:''
-    }])
+    const [preventColorValues, setColorValues] = useState([])
+    const colorValues = preventColorValues.map((value, index) => ({...value, id: index}))
 
     return (
         <>

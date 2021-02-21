@@ -15,18 +15,12 @@ export function Gradient({style, colorValue, index, colorValues, setColorValues}
     }
 
     function deleteGradientField() {
-        console.log(index)
         const filteredColorValues = []
         colorValues.forEach(function (item, i) {
-
-            if (i == index) {
-
-            } else {
+            if(i != index){
                 filteredColorValues.push(item)
             }
             setColorValues(filteredColorValues)
-            console.log(item)
-            console.log(i)
         })
     }
 

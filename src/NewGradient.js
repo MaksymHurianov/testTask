@@ -24,12 +24,16 @@ export function NewGradient({setColorValues}) {
     }
 
     function changeFirstColor(e) {
-        setColorFirstValue(e.currentTarget.value)
+        if(e.currentTarget.value.length <= 7){
+            setColorFirstValue(e.currentTarget.value)
+        }
         setIsFirstInput(false)
     }
 
     function changeSecondColor(e) {
-        setColorSecondValue(e.currentTarget.value)
+        if(e.currentTarget.value.length <= 7){
+            setColorSecondValue(e.currentTarget.value)
+        }
         setIsSecondInput(false)
     }
 
@@ -73,6 +77,7 @@ export function NewGradient({setColorValues}) {
 
     return (
         <>
+            <div className={'title'}>Create new item</div>
             <div className={'inputWrapper'}>
                 <input onChange={changeFirstColor} value={colorFirstValue} style={isFirstInput?inputStyle:undefined} onBlur={blurFirstInput} className={'inputStyle'}/>
                 <input onChange={changeSecondColor} value={colorSecondValue} style={isSecondInput?inputStyle:undefined} onBlur={blurSecondInput} className={'inputStyle'}/>

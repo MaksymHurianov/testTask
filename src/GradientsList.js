@@ -5,15 +5,16 @@ export function GradientsList({colorValues, setColorValues}) {
 
     return (
         <div>
-            {colorValues.map((colorValue, index) => {
-                if(colorValue.colorFirstValue ==''&& colorValue.colorSecondValue == ''){
+            <div className={'title'}>Items list</div>
+            {colorValues.map((colorValue) => {
+                if(!colorValue.colorFirstValue && !colorValue.colorSecondValue){
                     return
                 }else{
-                    return <Gradient key={index} style={{
+                    return <Gradient key={colorValue.id} style={{
                         width: '250px',
                         height: '50px',
                         background: `linear-gradient(to right, ${colorValue.colorFirstValue}, ${colorValue.colorSecondValue})`
-                    }} colorValue={colorValue} index={index} setColorValues={setColorValues} colorValues={colorValues}/>
+                    }} colorValue={colorValue} index={colorValue.id} setColorValues={setColorValues} colorValues={colorValues}/>
                 }
 
             })}
